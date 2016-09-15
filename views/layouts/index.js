@@ -1,2 +1,0 @@
-var bt = require('bootstrap');
-
