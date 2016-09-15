@@ -11,17 +11,16 @@
                 getContent(tab, sport);
             });
         });
+
+        getContent('15mins', 'all_sports');
     });
 
     function getContent(tab, sport) {
-//        console.log(tab, sport);
-
         $.ajax({
-            url: "/" + tab + "/" + sport,
+            url: "/" + tab + "/" + sport + '?r=' + Math.random(),
             context: document.body
         }).done(function(data) {
-            var content = tab + " : " + sport;
-            pasteContent(tab, sport, content);
+            pasteContent(tab, sport, data);
         }).fail(function( jqXHR, textStatus ) {
             pasteContent(tab, sport, jqXHR.responseText);
         });
@@ -30,7 +29,7 @@
     function pasteContent(tab, sport, content) {
         console.log(content);
         var tab_id = "tab_content_" + tab;
-        $('#'+tab_id).text(content);
+        $('#'+tab_id).append(content);
         console.log($('#'+tab_id));
     }
 
