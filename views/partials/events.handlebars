@@ -1,23 +1,40 @@
 {{#each events}}
 
-    <div class="media">
-        <div class="media-left media-middle">
-            <a href="#">
-                <img alt="sport" width="25" src="/img/football.png" />
-            </a>
-        </div>
-        <div class="media-body">
-            {{../name}} - {{tournament}}
-            <h4 class="media-heading">{{match}}</h4>
-        </div>
-    </div>
+
 
     <div class="list-group">
-        <a href="#" class="list-group-item list-group-item-warning">
-            <span class="badge">{{bets}}</span>
-            {{match}}
-        </a>
+
+        <button type="button" class="list-group-item">
+
+            <div class="media">
+
+                <div class="media-left media-middle">
+                    <a href="#">
+                        <img alt="{{sportName}}" width="25" src="/img/{{sportAlias}}.png" />
+                    </a>
+                </div>
+                <div class="media-body">
+                    {{sportName}} - {{tournament}} <span style="color:lightgray">(id={{id}})</span>
+                    <h4 class="media-heading">{{match}}</h4>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="{{bets_value}}" aria-valuemin="0" aria-valuemax="100" style="width: {{bets_value}}%">
+                            <span>{{bets}} bets</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </button>
+
     </div>
+
+    {{!--<div class="list-group">--}}
+        {{!--<a href="#" class="list-group-item list-group-item-warning">--}}
+            {{!--<span class="badge">{{bets}}</span>--}}
+            {{!--{{match}}--}}
+        {{!--</a>--}}
+    {{!--</div>--}}
 
 {{/each}}
 

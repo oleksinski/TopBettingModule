@@ -1,3 +1,12 @@
+<div class="media">
+    <div class="media-left media-middle"></div>
+
+    <div class="media-body">
+        <span class="label label-default">&larr; back</span>
+        <span style="padding-left: 20px; font-size: x-large">Top Betting</span>
+    </div>
+</div>
+
 <div>
     {{> tabs}}
 </div>
@@ -7,7 +16,7 @@
         $('#tabs li').each(function(i) {
             $(this).on('click', function (e) {
                 var tab = $(this).find('a').data('tab-id');
-                var sport = 'football';
+                var sport = 'all_sports';
                 getContent(tab, sport);
             });
         });
@@ -20,14 +29,21 @@
             url: "/" + tab + "/" + sport + '?r=' + Math.random(),
             context: document.body
         }).done(function(data) {
-            pasteContent(data);
+            pasteContent(data, sport);
         }).fail(function( jqXHR, textStatus ) {
             pasteContent(jqXHR.responseText);
         });
     }
 
-    function pasteContent(content) {
+    function pasteContent(content, sport) {
         $('#tab_content').html(content);
+
+        var dom = document.querySelector("#heading" + sport);
+        if (dom) {
+            window.setTimeout(function () {
+                window.scrollTo(0, dom.getBoundingClientRect().top);
+            }, 1);
+        }
     }
 
 </script>

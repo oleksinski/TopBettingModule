@@ -1,0 +1,142 @@
+[
+  {
+    "id": "15mins",
+    "title": "15 mins",
+    "active": true,
+    "events": [
+      {
+        "id": 9,
+        "bets": 850
+      },
+      {
+        "id": 1,
+        "bets": 697
+      },
+      {
+        "id": 3,
+        "bets": 543
+      },
+      {
+        "id": 12,
+        "bets": 200
+      },
+      {
+        "id": 8,
+        "bets": 100
+      },
+      {
+        "id": 10,
+        "bets": 88
+      },
+      {
+        "id": 5,
+        "bets": 93
+      },
+      {
+        "id": 7,
+        "bets": 26
+      }
+    ]
+  },
+  {
+    "id": "hour",
+    "title": "Hour",
+    "active": false,
+    "events": [
+      {
+        "id": 1,
+        "bets": 678
+      },
+      {
+        "id": 11,
+        "bets": 505
+      },
+      {
+        "id": 2,
+        "bets": 500
+      },
+      {
+        "id": 3,
+        "bets": 200
+      },
+      {
+        "id": 4,
+        "bets": 65
+      }
+    ]
+  },
+  {
+    "id": "day",
+    "title": "Day",
+    "active": false,
+    "events": [
+      {
+        "id": 1,
+        "bets": 375
+      },
+      {
+        "id": 2,
+        "bets": 234
+      },
+      {
+        "id": 3,
+        "bets": 115
+      },
+      {
+        "id": 12,
+        "bets": 100
+      },
+      {
+        "id": 4,
+        "bets": 90
+      },
+      {
+        "id": 5,
+        "bets": 50
+      },
+      {
+        "id": 6,
+        "bets": 34
+      }
+    ]
+  },
+  {
+    "id": "week",
+    "title": "Week",
+    "active": false,
+    "events": [
+      {
+        "id": 1,
+        "bets": 985
+      },
+      {
+        "id": 2,
+        "bets": 756
+      },
+      {
+        "id": 12,
+        "bets": 600
+      },
+      {
+        "id": 3,
+        "bets": 543
+      },
+      {
+        "id": 4,
+        "bets": 400
+      },
+      {
+        "id": 5,
+        "bets": 200
+      },
+      {
+        "id": 6,
+        "bets": 100
+      },
+      {
+        "id": 7,
+        "bets": 26
+      }
+    ]
+  }
+]

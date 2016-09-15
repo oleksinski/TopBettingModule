@@ -4,8 +4,7 @@ var exphbs  = require('express-handlebars');
 var Promise = global.Promise || require('promise');
 var app = express();
 
-
-var utils = require('./utils' ).utils;
+var data = require('./helper/data').data;
 
 var config = {
     defaultLayout: 'main',
@@ -19,15 +18,14 @@ app.set('view engine', 'handlebars');
 app.use(express.static('public'));
 
 app.get('/', function (req, res) {
-    res.render('home', {'tabs': utils.getTabs()});
+    res.render('home', {'tabs': data.getTabs()});
 });
 
-app.get('/:period/:sport', function (req, res) {
-    var period = req.params.period;
-    var sport = req.params.sport;
-    //var sportData = utils.dataByPeriodAndSportName(period, sport);
-    //res.render('sports', {'sports': sportData, layout:false});
-    res.render('sports', {'sports': utils.getMockData(), layout:false});
+app.get('/:tabId/:sportAlias', function (req, res) {
+    var tabId = req.params.tabId;
+    var sportAlias = req.params.sportAlias;
+    res.render('sports', {'sports': data.getAllSportsWithEventsForTabAndSportAlias(tabId, sportAlias), layout:false});
+    //res.send(data.getAllSportsWithEventsForTabAndSportAlias(tabId, sportAlias));
 });
 
 app.listen(3000);

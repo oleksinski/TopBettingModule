@@ -1,0 +1,42 @@
+[
+  {
+    "id": 100,
+    "alias": "all_sports",
+    "name": "All sports"
+  },
+  {
+    "id": 1,
+    "alias": "football",
+    "name": "Football"
+  },
+  {
+    "id": 2,
+    "alias": "baseball",
+    "name": "Baseball"
+  },
+  {
+    "id": 3,
+    "alias": "tennis",
+    "name": "Tennis"
+  },
+  {
+    "id": 4,
+    "alias": "cricket",
+    "name": "Cricket"
+  },
+  {
+    "id": 5,
+    "alias": "handball",
+    "name": "Handball"
+  },
+  {
+    "id": 6,
+    "alias": "snooker",
+    "name": "Snooker"
+  },
+  {
+    "id": 7,
+    "alias": "basketball",
+    "name": "Basketball"
+  }
+]
