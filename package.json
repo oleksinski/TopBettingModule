@@ -1,7 +1,7 @@
 {
   "name": "top-betting-module",
   "version": "0.0.1",
-  "description": "Top Betting Module demo",
+  "description": "Top Betting Module",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/oleksinski/TopBettingModule#readme",
   "dependencies": {
-    "bootstrap": "^3.3.7",
+//    "bootstrap": "^3.3.7",
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0"
   }
