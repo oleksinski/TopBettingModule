@@ -63,6 +63,7 @@
     {
       "id": "15mins",
       "title": "15 mins",
+      "active": true,
       "events": [
         {
           "id": 1,
@@ -93,6 +94,7 @@
     {
       "id": "hour",
       "title": "Hour",
+      "active": false,
       "events": [
         {
           "id": 1,
@@ -123,6 +125,7 @@
     {
       "id": "day",
       "title": "Day",
+      "active": false,
       "events": [
         {
           "id": 1,
@@ -153,6 +156,7 @@
     {
       "id": "week",
       "title": "Week",
+      "active": false,
       "events": [
         {
           "id": 1,

@@ -1,28 +1,15 @@
 <div>  
     <ul class="nav nav-tabs" role="tablist" id="tabs"> 
         {{#each data.tabs}} 
-            <li role="presentation" {{!--class="active"--}}>
-                <a href="#{{id}}" aria-controls="{{id}}" role="tab" data-toggle="tab" data-tab-content-id="tab_content_{{id}}">{{title}}</a>
+            <li role="presentation" {{#if active}}class="active"{{/if}}>
+                <a href="#{{id}}" data-tab-id="{{id}}" aria-controls="tab_content_{{id}}" role="tab" data-toggle="tab">{{title}}</a>
             </li>
         {{/each}} 
     </ul>
       
     <div class="tab-content"> 
         {{#each data.tabs}} 
-            <div role="tabpanel" class="tab-pane {{!--active--}}" id="tab_content_{{id}}">{{title}}</div>
+            <div role="tabpanel" class="tab-pane fade in {{#if active}}active{{/if}}" id="tab_content_{{id}}"></div>
         {{/each}} 
     </div>
 </div>
-
-<script type="text/javascript">
-
-    $('#tabs li').each(function(i) {
-        $(this).on('click', function (e) {
-            var dataTabContentId = $(this).find("a").data('tab-content-id');
-
-            $('#'+dataTabContentId).append(('#accordion'));
-
-            $('#accordion').css('display', 'block');
-        })
-    });
-</script>

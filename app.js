@@ -26,7 +26,7 @@ app.get('/:period/:sport', function (req, res) {
     var period = req.params.period;
     var sport = req.params.sport;
     var sportData = utils.dataByPeriodAndSportName(data, period, sport);
-    res.render('tab', {'data': sportData});
+    res.render('sports', {'data': sportData, layout:false});
 });
 
 app.listen(3000);
