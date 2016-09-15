@@ -1,5 +1,7 @@
+{{#if tabs}} 
+
 <div>  
-    {{#if tabs}} 
+
     <ul class="nav nav-tabs" role="tablist" id="tabs"> 
         {{#each tabs}} 
             <li role="presentation" {{!--class="active"--}}><a href="#{{id}}" aria-controls="{{id}}" role="tab" data-toggle="tab">{{title}}</a></li>
@@ -11,7 +13,6 @@
             <div role="tabpanel" class="tab-pane {{!--active--}}" id="{{id}}">{{title}}</div>
         {{/each}} 
     </div>
-    {{/if}}  
 
     <script type="text/javascript">
         $('#tabs li').each(function(index) {
@@ -20,7 +21,11 @@
             })
         });
     </script>
+
+
 </div>
+{{/if}}  
+
 
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
     {{#each sports}}
