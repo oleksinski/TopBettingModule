@@ -3,7 +3,23 @@
     {
       "id": 100,
       "alias": "all_sports",
-      "name": "All sports"
+      "name": "All sports",
+      "events": [
+        {
+          "id": 1,
+          "sportId": 1,
+          "tournament": "tournament 1",
+          "match": "team 1 - team 2",
+          "bets": 50
+        },
+        {
+          "id": 2,
+          "sportId": 1,
+          "tournament": "tournament 1",
+          "match": "team 3 - team 4",
+          "bets": 100
+        }
+      ]
     },
     {
       "id": 1,

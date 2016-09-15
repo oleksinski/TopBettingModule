@@ -10,6 +10,33 @@ var utils = {
         return data.tabs;
     },
 
+    getMockData: function () {
+        return data.sports;
+    },
+
+    getDataByTabAndSport: function (tabId, sportId) {
+        var result = [];
+
+        var sports = data.sports;
+        var tabs = data.tabs;
+        var events = data.events;
+
+        var i, j, k;
+
+        //
+        result = sports;
+        for (i = 0; i < tabs.length; i++) {
+            var tab = tabs[i];
+            if (tab.id === tabId) {
+                var tabEvents = tab.events;
+
+                //for (j = 0; j < )
+            }
+        }
+
+        return result;
+    },
+
     getTab: function(period) {
         return this.getTabs().filter(function(tab){
             if(tab.id == period) {
