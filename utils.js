@@ -1,7 +1,17 @@
-function Utils() {
+var data = require('./data.json');
 
-    this.dataByPeriodAndSportName = function(data, period, sportName) {
-       var period = period;
+var utils = {
+
+    getAllData: function () {
+        return data;
+    },
+
+    getTabs: function () {
+        return data.tabs;
+    },
+
+    dataByPeriodAndSportName: function(period, sportName) {
+        var period = period;
         var sport = data.sports.filter(function(sport){
             if(sport.alias == sportName) {
                 return sport;
@@ -15,6 +25,7 @@ function Utils() {
         sport.events = events;
         return {'sports': [sport]};
     }
+
 };
 
-exports.utils = new Utils();
+exports.utils = utils;

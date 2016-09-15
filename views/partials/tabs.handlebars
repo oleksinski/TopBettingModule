@@ -1,15 +1,13 @@
 <div>  
     <ul class="nav nav-tabs" role="tablist" id="tabs"> 
-        {{#each data.tabs}} 
+        {{#each tabs}} 
             <li role="presentation" {{#if active}}class="active"{{/if}}>
                 <a href="#{{id}}" data-tab-id="{{id}}" aria-controls="tab_content_{{id}}" role="tab" data-toggle="tab">{{title}}</a>
             </li>
         {{/each}} 
     </ul>
-      
+
     <div class="tab-content"> 
-        {{#each data.tabs}} 
-            <div role="tabpanel" class="tab-pane fade in {{#if active}}active{{/if}}" id="tab_content_{{id}}"></div>
-        {{/each}} 
+        <div role="tabpanel" class="tab-pane fade in active" id="tab_content"></div>
     </div>
 </div>

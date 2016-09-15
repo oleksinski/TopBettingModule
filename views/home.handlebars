@@ -20,17 +20,14 @@
             url: "/" + tab + "/" + sport + '?r=' + Math.random(),
             context: document.body
         }).done(function(data) {
-            pasteContent(tab, sport, data);
+            pasteContent(data);
         }).fail(function( jqXHR, textStatus ) {
-            pasteContent(tab, sport, jqXHR.responseText);
+            pasteContent(jqXHR.responseText);
         });
     }
 
-    function pasteContent(tab, sport, content) {
-        console.log(content);
-        var tab_id = "tab_content_" + tab;
-        $('#'+tab_id).append(content);
-        console.log($('#'+tab_id));
+    function pasteContent(content) {
+        $('#tab_content').html(content);
     }
 
 </script>
