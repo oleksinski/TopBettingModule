@@ -1,5 +1,5 @@
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-    {{#each data.sports}}
+    {{#each sports}}
         <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="heading{{alias}}">
                 <h4 class="panel-title">
@@ -12,11 +12,7 @@
             <div id="collapse{{alias}}" class="panel-collapse collapse" role="tabpanel"
                  aria-labelledby="heading{{alias}}">
                 <div class="panel-body">
-                    {{#each events}}
-                        <div>{{tournament}}</div>
-                        <div>{{match}}</div>
-                        <div>{{bets}}</div>
-                    {{/each}}
+                    {{> events}}
                 </div>
             </div>
         </div>

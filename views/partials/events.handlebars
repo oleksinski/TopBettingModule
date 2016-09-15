@@ -1,0 +1,23 @@
+{{#each events}}
+
+    <div class="media">
+        <div class="media-left media-middle">
+            <a href="#">
+                <img alt="sport" width="25" src="/img/{{sport.alias}}.png" />
+            </a>
+        </div>
+        <div class="media-body">
+            {{sport.name}} - {{tournament}}
+            <h4 class="media-heading">{{match}}</h4>
+        </div>
+    </div>
+
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-warning">
+            <span class="badge">{{bets}}</span>
+            {{match}}
+        </a>
+    </div>
+
+{{/each}}
+
