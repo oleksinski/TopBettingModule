@@ -1,0 +1,165 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "sportId": 1,
+      "sportName": "football",
+      "tournament": "tournament 1",
+      "match": "team 1 - team 2"
+    },
+    {
+      "id": 2,
+      "sportId": 1,
+      "sportName": "football",
+      "tournament": "tournament 1",
+      "match": "team 3 - team 4"
+    },
+    {
+      "id": 3,
+      "sportId": 2,
+      "sportName": "basketball",
+      "tournament": "tournament 1",
+      "match": "team 1 - team 2"
+    },
+    {
+      "id": 4,
+      "sportId": 2,
+      "sportName": "basketball",
+      "tournament": "tournament 1",
+      "match": "team 3 - team 4"
+    },
+    {
+      "id": 5,
+      "sportId": 3,
+      "sportName": "tennis",
+      "tournament": "tournament 1",
+      "match": "team 1 - team 2"
+    },
+    {
+      "id": 6,
+      "sportId": 3,
+      "sportName": "tennis",
+      "tournament": "tournament 1",
+      "match": "team 3 - team 4"
+    }
+  ],
+  "tabs": [
+    {
+      "id": 1,
+      "title": "15 mins",
+      "events": [
+        {
+          "id": 1,
+          "bets": 123
+        },
+        {
+          "id": 2,
+          "bets": 234
+        },
+        {
+          "id": 3,
+          "bets": 543
+        },
+        {
+          "id": 4,
+          "bets": 765
+        },
+        {
+          "id": 5,
+          "bets": 93
+        },
+        {
+          "id": 6,
+          "bets": 34
+        }
+      ]
+    },
+    {
+      "title": "hour",
+      "events": [
+        {
+          "id": 1,
+          "bets": 678
+        },
+        {
+          "id": 2,
+          "bets": 234
+        },
+        {
+          "id": 3,
+          "bets": 543
+        },
+        {
+          "id": 4,
+          "bets": 765
+        },
+        {
+          "id": 5,
+          "bets": 93
+        },
+        {
+          "id": 6,
+          "bets": 34
+        }
+      ]
+    },
+    {
+      "title": "day",
+      "events": [
+        {
+          "id": 1,
+          "bets": 123
+        },
+        {
+          "id": 2,
+          "bets": 234
+        },
+        {
+          "id": 3,
+          "bets": 543
+        },
+        {
+          "id": 4,
+          "bets": 765
+        },
+        {
+          "id": 5,
+          "bets": 93
+        },
+        {
+          "id": 6,
+          "bets": 34
+        }
+      ]
+    },
+    {
+      "title": "week",
+      "events": [
+        {
+          "id": 1,
+          "bets": 123
+        },
+        {
+          "id": 2,
+          "bets": 234
+        },
+        {
+          "id": 3,
+          "bets": 543
+        },
+        {
+          "id": 4,
+          "bets": 765
+        },
+        {
+          "id": 5,
+          "bets": 93
+        },
+        {
+          "id": 6,
+          "bets": 34
+        }
+      ]
+    }
+  ]
+}
