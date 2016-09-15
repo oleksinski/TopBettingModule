@@ -1,0 +1,24 @@
+{
+  "name": "top-betting-module",
+  "version": "0.0.1",
+  "description": "Top Betting Module demo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oleksinski/TopBettingModule.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oleksinski/TopBettingModule/issues"
+  },
+  "homepage": "https://github.com/oleksinski/TopBettingModule#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0"
+  }
+}
