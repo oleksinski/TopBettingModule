@@ -5,6 +5,7 @@ var Promise = global.Promise || require('promise');
 var app = express();
 
 var data = require('./data.json');
+var utils = require('./utils' ).utils;
 
 var config = {
     defaultLayout: 'main',
@@ -21,6 +22,11 @@ app.get('/', function (req, res) {
     res.render('home', {'data': data});
 });
 
-
+app.get('/:period/:sport', function (req, res) {
+    var period = req.params.period;
+    var sport = req.params.sport;
+    var sportData = utils.dataByPeriodAndSportName(data, period, sport);
+    res.render('tab', {'data': sportData});
+});
 
 app.listen(3000);
