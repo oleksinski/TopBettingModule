@@ -1,15 +1,13 @@
-{{#if tabs}} 
-
 <div>  
 
     <ul class="nav nav-tabs" role="tablist" id="tabs"> 
-        {{#each tabs}} 
+        {{#each data.tabs}} 
             <li role="presentation" {{!--class="active"--}}><a href="#{{id}}" aria-controls="{{id}}" role="tab" data-toggle="tab">{{title}}</a></li>
         {{/each}} 
     </ul>
       
     <div class="tab-content"> 
-        {{#each tabs}} 
+        {{#each data.tabs}} 
             <div role="tabpanel" class="tab-pane {{!--active--}}" id="{{id}}">{{title}}</div>
         {{/each}} 
     </div>
@@ -21,25 +19,20 @@
             })
         });
     </script>
-
-
 </div>
-{{/if}}  
 
 
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-    {{#each sports}}
+    {{#each data.sports}}
         <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="heading{{name}}">
+            <div class="panel-heading" role="tab" id="heading{{alias}}">
                 <h4 class="panel-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                       href="#collapse{{name}}" aria-expanded="false" aria-controls="collapse{{name}}">
-                        <div> {{name}}</div>
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{alias}}" aria-expanded="false" aria-controls="collapse{{alias}}">
+                        <div>{{name}}</div>
                     </a>
                 </h4>
             </div>
-            <div id="collapse{{name}}" class="panel-collapse collapse" role="tabpanel"
-                 aria-labelledby="heading{{name}}">
+            <div id="collapse{{alias}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{alias}}">
                 <div class="panel-body">
                     items
                 </div>
@@ -47,3 +40,4 @@
         </div>
     {{/each}}
 </div>
+
