@@ -9,34 +9,41 @@
     {{> tabs}}
 </div>
 <script type="text/javascript">
-    $(function () {
-        $('#tabs li').each(function (i) {
+    var ALL_SPORTS_ALIAS = 'all_sports';
+
+    $(function() {
+        $('#tabs li').each(function(i) {
             $(this).on('click', function (e) {
-                var tab = $(this).find('a').data('tab-id');
-                var sport = 'all_sports';
-                getContent(tab, sport);
+                var tabId = $(this).find('a').data('tab-id');
+                var sportAlias = 'all_sports';
+                getContent(tabId, sportAlias);
             });
         });
-        getContent('15mins', 'all_sports');
-    })
-    function getContent(tab, sport) {
+
+        getContent('15mins', ALL_SPORTS_ALIAS);
+    });
+
+    function getContent(tabId, sportAlias) {
         $.ajax({
-            url: "/" + tab + "/" + sport + '?r=' + Math.random(),
+            url: "/" + tabId + "/" + sportAlias + '?r=' + Math.random(),
             context: document.body
-        }).done(function (data) {
-            pasteContent(data, sport);
-        }).fail(function (jqXHR, textStatus) {
-            pasteContent(jqXHR.responseText);
+        }).done(function(data) {
+            pasteContent(data, tabId, sportAlias);
+        }).fail(function(jqXHR, textStatus ) {
+            pasteContent(jqXHR.responseText, tabId, sportAlias);
         });
     }
-    function pasteContent(content, sport) {
+
+    function pasteContent(content, tabId, sportAlias) {
         $('#tab_content').html(content);
 
-        var dom = document.querySelector("#heading" + sport);
-        if (dom) {
-            window.setTimeout(function () {
-                window.scrollTo(0, dom.getBoundingClientRect().top);
-            }, 1);
+        if (sportAlias != ALL_SPORTS_ALIAS) {
+            var dom = document.querySelector("#heading" + sportAlias);
+            if (dom) {
+                window.setTimeout(function () {
+                    window.scrollTo(0, dom.getBoundingClientRect().top - 100);
+                }, 1);
+            }
         }
     }
 </script>
