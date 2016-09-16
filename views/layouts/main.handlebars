@@ -10,12 +10,14 @@
     <script src="/cdn/jquery.min.js"></script>
     <script src="/cdn/bootstrap.min.js"></script>
     <script type="text/javascript">
-        setTimeout(function () {
-            $('.progress-bar').addClass("active");
-        }, 3000)
-        setTimeout(function () {
-            $('.progress-bar').removeClass("active");
-        }, 10000)
+        $(function() {
+            setTimeout(function () {
+                $('.progress-bar').addClass("active");
+            }, 3000);
+            setTimeout(function () {
+                $('.progress-bar').removeClass("active");
+            }, 10000);
+        });
     </script>
 </head>
 <body>
@@ -43,7 +45,7 @@
         </div>
     </div>
 </nav>
-<div class="wrapper">
+<div class="content_wrapper">
     {{{body}}}
 </div>
 </body>
