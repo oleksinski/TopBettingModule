@@ -45,3 +45,19 @@ html, body {
     align-items: center;
 }
 
+.topBetting{
+    padding:10px 20px;
+    font-size: x-large
+}
+
+.media {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    flex-grow:2;
+    justify-content: center;
+}
