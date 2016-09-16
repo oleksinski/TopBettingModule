@@ -11,7 +11,21 @@
     <script type="text/javascript">
         document.ontouchmove = function (e) {
             return true;
-        }
+        };
+
+
+        setTimeout(function(){
+            $('.progress-bar').addClass("active");
+        }, 3000)
+
+
+        setTimeout(function(){
+            $('.progress-bar').removeClass("active");
+        }, 10000);
+
+
+
+
     </script>
 
     <style type="text/css">

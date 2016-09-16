@@ -24,7 +24,6 @@
     </style>
 
 
-
     <div class="list-group">
 
         <button type="button" class="list-group-item">
@@ -40,7 +39,8 @@
                     {{sportName}} - {{tournament}} <span style="color:lightgray">(id={{id}})</span>
                     <h4 class="media-heading">{{match}}</h4>
                     <div class="progress">
-                        <div class="progress-bar progress-bar-info progress-bar-striped"
+                        <div  id="progressBar"
+                                class="progress-bar progress-bar-info progress-bar-striped"
                              role="progressbar" aria-valuenow="{{bets_value}}" aria-valuemin="0" aria-valuemax="100"
                              style="width: {{bets_value}}%">
                             <span>{{bets}} bets</span>
