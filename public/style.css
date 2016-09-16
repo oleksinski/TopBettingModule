@@ -46,7 +46,8 @@ body {
 }
 
 .topBetting{
-    font-size: x-large
+    font-size: x-large;
+    padding: 0 80px;
 }
 
 .media {
@@ -68,9 +69,17 @@ body {
 }
 
 .header {
-    display: flex !important;
-    flex-grow:2;
-    justify-content: center;
+    display: table;
+    margin: auto;
+}
+
+.header > div {
+    display: table-cell;
+}
+
+.header > .label {
+    display: flex;
+    float: left;
 }
 
 .betslip {
