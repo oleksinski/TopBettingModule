@@ -2,50 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Top Betting - Playtech One Sports</title>
     <link rel="stylesheet" href="/cdn/bootstrap.min.css"/>
     <link rel="stylesheet" href="/cdn/bootstrap-theme.min.css"/>
-    <link rel="stylesheet" href="../../css/style.css"/>
+    <link rel="stylesheet" href="style.css"/>
     <script src="/cdn/jquery.min.js"></script>
     <script src="/cdn/bootstrap.min.js"></script>
     <script type="text/javascript">
-        document.ontouchmove = function (e) {
-            return true;
-        };
-
-
-        setTimeout(function(){
+        setTimeout(function () {
             $('.progress-bar').addClass("active");
         }, 3000)
-
-
-        setTimeout(function(){
+        setTimeout(function () {
             $('.progress-bar').removeClass("active");
-        }, 10000);
-
-
-
-
+        }, 10000)
     </script>
-
-    <style type="text/css">
-        body {
-            padding-top: 50px;
-        }
-
-        html, body {
-            overflow: hidden;
-            height: 100%;
-        }
-        .wrapper {
-            height: 100%;
-            overflow: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-    </style>
 </head>
 <body>
-
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -70,7 +43,6 @@
         </div>
     </div>
 </nav>
-
 <div class="wrapper">
     {{{body}}}
 </div>

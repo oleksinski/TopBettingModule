@@ -4,12 +4,14 @@
             <div class="panel-heading" role="tab" id="heading{{alias}}">
                 <h4 class="panel-title">
                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
-                       href="#collapse{{alias}}" aria-expanded="false" aria-controls="collapse{{alias}}" data-sport-alias="{{alias}}" data-tab-id="{{tab_id}}">
-                        <div><img alt="{{name}}" width="25" src="/img/{{alias}}.png" /> {{name}}</div>
+                       href="#collapse{{alias}}" aria-expanded="false" aria-controls="collapse{{alias}}"
+                       data-sport-alias="{{alias}}" data-tab-id="{{tab_id}}">
+                        <div><img alt="{{name}}" width="25" src="/img/{{alias}}.png"/> {{name}}</div>
                     </a>
                 </h4>
             </div>
-            <div id="collapse{{alias}}" class="panel-collapse collapse {{#if selected}}in{{/if}}" role="tabpanel" aria-labelledby="heading{{alias}}">
+            <div id="collapse{{alias}}" class="panel-collapse collapse {{#if selected}}in{{/if}}" role="tabpanel"
+                 aria-labelledby="heading{{alias}}">
                 <div class="panel-body">
                     {{> events}}
                 </div>
@@ -17,14 +19,12 @@
         </div>
     {{/each}}
 </div>
-
 <script type="text/javascript">
-    $(function() {
+    $(function () {
         $('#accordion').on('show.bs.collapse', function (e) {
             var clickedElement = $(e.target).siblings('.panel-heading').find('a');
             var sportAlias = $(clickedElement).data('sport-alias');
             var tabId = $(clickedElement).data('tab-id');
-
             setTimeout(function () {
                 getContent(tabId, sportAlias);
             }, 250);
