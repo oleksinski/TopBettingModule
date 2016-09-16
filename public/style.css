@@ -32,8 +32,6 @@ html, body {
     }
 }
 
-
-
 .panel-heading {
     display: flex;
     justify-content: space-between;
@@ -46,7 +44,6 @@ html, body {
 }
 
 .topBetting{
-    padding:10px 20px;
     font-size: x-large
 }
 
@@ -60,4 +57,9 @@ html, body {
     display: flex;
     flex-grow:2;
     justify-content: center;
+}
+
+.betslip {
+    padding-right: 7px;
+    font-size: smaller;
 }
