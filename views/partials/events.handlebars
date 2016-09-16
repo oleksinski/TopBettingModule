@@ -2,14 +2,14 @@
     <div class="list-group">
         <button type="button" class="list-group-item">
             <div class="media">
-                <div class="media-left media-middle">
+                <div class="media-left">
                     <a href="#">
                         <img alt="{{sportName}}" width="25" src="/img/{{sportAlias}}.png"/>
                     </a>
                 </div>
                 <div class="media-body">
-                    {{sportName}} - {{tournament}} <span style="color:lightgray">(id={{id}})</span>
-                    <h4 class="media-heading">{{match}}</h4>
+                    <div>{{sportName}} - {{tournament}} <span style="color:lightgray">(id={{id}})</span></div>
+                    <div class="media-heading">{{match}}</div>
                     <div class="progress">
                         <div id="progressBar"
                              class="progress-bar progress-bar-info progress-bar-striped"

@@ -50,9 +50,21 @@ body {
 }
 
 .media {
+    display: table;
+}
+
+.media > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.media-left {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
+}
+
+.media-body{
+
 }
 
 .header {
