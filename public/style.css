@@ -3,8 +3,10 @@ body {
 }
 
 html, body {
-    overflow: hidden;
-    height: 100%;
+    overflow-x: hidden;
+}
+body {
+    position: relative
 }
 
 .wrapper {

@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
     <title>Top Betting - Playtech One Sports</title>
     <link rel="stylesheet" href="/cdn/bootstrap.min.css"/>
     <link rel="stylesheet" href="/cdn/bootstrap-theme.min.css"/>
@@ -17,35 +21,58 @@
 
 
     <script type="text/javascript">
-        setTimeout(function () {
-            $('.progress-bar').addClass("active");
-
-            (function(){
-                mRefresh({
-                    nav: '#navMain',
-                    scrollEl: '#contentMain'
-                });
-                // Button on the top of page
-                $('#doRotate').on('tap click',function(){
-                    mRefresh.refresh();
-                    return false;
-                });
-
-                // prevent browser scroll
-                $('#navMain').on('touchstart', function(e){
-                    e.preventDefault();
-                });
 
 
-            })();
+        $(function() {
+            setTimeout(function () {
+                $('.progress-bar').addClass("active");
+
+                (function(){
+                    mRefresh({
+                        nav: '#navMain',
+                        scrollEl: '#contentMain',
+                        maxTime: 4000, //Number
+                        freeze: false //Boolen
+                    });
+                    // Button on the top of page
+                    $('#doRotate').on('tap click',function(){
+                        mRefresh.refresh();
+                        return false;
+                    });
 
 
 
-        }, 3000)
-        setTimeout(function () {
-            $('.progress-bar').removeClass("active");
-        }, 10000)
+                    // prevent browser scroll
+                    $('#navMain').on('touchstart', function(e){
+                        e.preventDefault();
+                    });
+                    // Handle the start of interactions
+                    $('#contentMain').on('touchmove', function(e){
+                        var el = document.getElementById("contentMain");
+                        var startTopScroll = el.scrollTop;
 
+                        if (startTopScroll <= 0) {
+                            el.scrollTop = 1;
+                        }
+                        if(startTopScroll + el.offsetHeight >= el.scrollHeight) {
+                            el.scrollTop = el.scrollHeight - el.offsetHeight - 1;
+                        }
+                    });
+
+
+
+                })();
+            }, 3000);
+            setTimeout(function () {
+                $('.progress-bar').removeClass("active");
+            }, 10000);
+
+
+           setTimeout(function(){
+
+          },100);
+
+        });
 
     </script>
 </head>
