@@ -1,3 +1,20 @@
+<style type="text/css">
+
+    .panel-heading {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .eventCnt {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+</style>
+
+
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
     {{#each sports}}
         <div class="panel panel-default">
@@ -9,6 +26,7 @@
                         <div><img alt="{{name}}" width="25" src="/img/{{alias}}.png"/> {{name}}</div>
                     </a>
                 </h4>
+                <span class="eventCnt btn-primary label label-primary">{{events.length}}</span>
             </div>
             <div id="collapse{{alias}}" class="panel-collapse collapse {{#if selected}}in{{/if}}" role="tabpanel"
                  aria-labelledby="heading{{alias}}">
