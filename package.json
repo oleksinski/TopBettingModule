@@ -18,6 +18,7 @@
   "homepage": "https://github.com/oleksinski/TopBettingModule#readme",
   "dependencies": {
     "express": "^4.14.0",
-    "express-handlebars": "^3.0.0"
+    "express-handlebars": "^3.0.0",
+    "material-refresh": "^0.1.0"
   }
 }

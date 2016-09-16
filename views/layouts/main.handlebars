@@ -9,16 +9,58 @@
     <link rel="stylesheet" href="style.css"/>
     <script src="/cdn/jquery.min.js"></script>
     <script src="/cdn/bootstrap.min.js"></script>
+
+    <script src='/cdn/zepto.js'></script>
+    <link rel='stylesheet' href='/cdn/material-refresh.min.css'/>
+
+    <script src='/cdn/material-refresh.min.js'></script>
+
+
     <script type="text/javascript">
         setTimeout(function () {
             $('.progress-bar').addClass("active");
+
+            (function(){
+                mRefresh({
+                    nav: '#navMain',
+                    scrollEl: '#contentMain'
+                });
+                // Button on the top of page
+                $('#doRotate').on('tap click',function(){
+                    mRefresh.refresh();
+                    return false;
+                });
+
+                // prevent browser scroll
+                $('#navMain').on('touchstart', function(e){
+                    e.preventDefault();
+                });
+
+
+            })();
+
+
+
         }, 3000)
         setTimeout(function () {
             $('.progress-bar').removeClass("active");
         }, 10000)
+
+
     </script>
 </head>
 <body>
+
+<header id="navMain" class="nav-bar">
+    <div class="nav-wrapper">
+        <span class="title"></span>
+            <span id="doRotate">
+                <span  class="rotate-btn"></span>
+            </span>
+    </div>
+</header>
+
+
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -43,7 +85,7 @@
         </div>
     </div>
 </nav>
-<div class="wrapper">
+<div class="wrapper" id="contentMain" >
     {{{body}}}
 </div>
 </body>
