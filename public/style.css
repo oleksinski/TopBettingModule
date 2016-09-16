@@ -31,3 +31,17 @@ html, body {
         transform: scale(.8);
     }
 }
+
+
+
+.panel-heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.eventCnt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
