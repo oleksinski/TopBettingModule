@@ -1,5 +1,28 @@
 {{#each events}}
 
+    <style type="text/css">
+
+        .progress-bar {
+            transform: translate3d(0, 0, 0);
+            animation: scaleUp 2s ease both;
+        }
+
+        @keyframes scaleDown {
+            to {
+                opacity: 0;
+                transform: scale(.8);
+            }
+        }
+
+        @keyframes scaleUp {
+            from {
+                opacity: 0;
+                transform: scale(.8);
+            }
+        }
+
+    </style>
+
 
 
     <div class="list-group">
@@ -17,7 +40,9 @@
                     {{sportName}} - {{tournament}} <span style="color:lightgray">(id={{id}})</span>
                     <h4 class="media-heading">{{match}}</h4>
                     <div class="progress">
-                        <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="{{bets_value}}" aria-valuemin="0" aria-valuemax="100" style="width: {{bets_value}}%">
+                        <div class="progress-bar progress-bar-info progress-bar-striped"
+                             role="progressbar" aria-valuenow="{{bets_value}}" aria-valuemin="0" aria-valuemax="100"
+                             style="width: {{bets_value}}%">
                             <span>{{bets}} bets</span>
                         </div>
                     </div>
