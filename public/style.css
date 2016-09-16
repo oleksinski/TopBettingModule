@@ -68,7 +68,7 @@ body {
 }
 
 .header {
-    display: flex;
+    display: flex !important;
     flex-grow:2;
     justify-content: center;
 }

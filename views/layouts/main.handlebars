@@ -13,57 +13,15 @@
     <script src="/cdn/jquery.min.js"></script>
     <script src="/cdn/bootstrap.min.js"></script>
 
-    <script src="/cdn/zepto.js"></script>
-    <link rel="stylesheet" href="/cdn/material-refresh.min.css" />
-    <script src="/cdn/material-refresh.min.js"></script>
-
     <script type="text/javascript">
 
         $(function() {
             setTimeout(function () {
                 $('.progress-bar').addClass("active");
-
-                (function(){
-                    mRefresh({
-                        nav: '#navMain',
-                        scrollEl: '#contentMain',
-                        maxTime: 4000, //Number
-                        freeze: false //Boolen
-                    });
-                    // Button on the top of page
-                    $('#doRotate').on('tap click',function(){
-                        mRefresh.refresh();
-                        return false;
-                    });
-
-                    // prevent browser scroll
-                    $('#navMain').on('touchstart', function(e){
-                        e.preventDefault();
-                    });
-                    // Handle the start of interactions
-                    $('#contentMain').on('touchmove', function(e){
-                        var el = document.getElementById("contentMain");
-                        var startTopScroll = el.scrollTop;
-
-                        if (startTopScroll <= 0) {
-                            el.scrollTop = 1;
-                        }
-                        if(startTopScroll + el.offsetHeight >= el.scrollHeight) {
-                            el.scrollTop = el.scrollHeight - el.offsetHeight - 1;
-                        }
-                    });
-
-                })();
             }, 3000);
             setTimeout(function () {
                 $('.progress-bar').removeClass("active");
             }, 10000);
-
-
-           setTimeout(function(){
-
-          },100);
-
         });
 
     </script>
