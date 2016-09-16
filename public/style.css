@@ -12,3 +12,22 @@ html, body {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
 }
+
+.progress-bar {
+    transform: translate3d(0, 0, 0);
+    animation: scaleUp 2s ease both;
+}
+
+@keyframes scaleDown {
+    to {
+        opacity: 0;
+        transform: scale(.8);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(.8);
+    }
+}
